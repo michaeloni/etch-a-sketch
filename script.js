@@ -19,7 +19,7 @@ let _darkeningInkChange = box => {
     }
 
     if(opacity == 1){
-        if(box.target.style.background == "black none repeat scroll 0% 0%"){
+        if(box.target.style.background == "black none repeat scroll 0% 0%" || box.target.style.background == "black"){
             return;
         }else{
             box.target.style.opacity = 0.1;
