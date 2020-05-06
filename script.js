@@ -13,17 +13,20 @@ let _blackInkChange = grid => {
 
 let _darkeningInkChange = box => {
     let opacity = Number(box.target.style.opacity);
-    console.log(opacity);
+    if(opacity < 1){
+        box.target.style.opacity = opacity + 0.1;
+        box.target.style.background = "black";
+    }
 
     if(opacity == 1){
-        return;
+        if(box.target.style.background == "black none repeat scroll 0% 0%"){
+            return;
+        }else{
+            box.target.style.opacity = 0.1;
+            box.target.style.background = "black";
+        }
     }
-
-    if(opacity < 1 || box.target.style.background != "black"){
-        box.target.style.opacity = opacity + 0.1;
-    }
-
-    box.target.style.background = "black";
+     
     
 }
 
