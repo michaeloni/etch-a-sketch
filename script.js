@@ -35,7 +35,6 @@ let _randomInkChange = grid =>{
     grid.target.style.background = getrandomColor();
 }
 
-
 function createGrid (rows, columns){
     removeOldGrid();
     container.style.setProperty('--grid-rows', rows);
